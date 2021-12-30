@@ -1,18 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace RestWithASPNETUdemy.Model
 {
+
+    [Table("person")]
     public class Person
     {
-
+        [Column("id")]  
         public long Id { get; set; }
-        public long FirstName { get; set; }
-        public long LastName { get; set; }
-        public long Address { get; set; }
-        public long Gender { get; set; }
+        [Column("firstname")]
+        public string FirstName { get; set; }
+        [Column("lastname")]
+        public string LastName { get; set; }
+        [Column("address")]
+        public string Address { get; set; }
+        [Column("gender")]
+        public string Gender { get; set; }
 
     }
 }
